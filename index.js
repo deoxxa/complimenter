@@ -1,10 +1,15 @@
-var templates = [
+var finalTemplates = [
   function() { return "you have " + getAbstractProperty(); },
   function() { return "you are " + getDescriptor(); },
   function() { return "this is " + getDescriptor(); },
-  function() { return "9 out of 10 doctors say " + getTemplate(); },
-  function() { return "people say " + getTemplate(); },
 ];
+
+var templates = [
+  function() { return "i've always thought " + getFinalTemplate(); },
+  function() { return "9 out of 10 doctors say " + getFinalTemplate(); },
+  function() { return "people say " + getFinalTemplate(); },
+  function() { return "i think " + getFinalTemplate(); },
+].concat(finalTemplates);
 
 var abstractProperties = [
   function() { return [makeSingularForm(getDescriptor()), getTangibleSingularProperty()].join(" "); },
@@ -89,6 +94,10 @@ var makeSingularForm = module.exports.makeSingularForm = function makeSingularFo
 var getTemplate = module.exports.getTemplate = function getTemplate() {
   return templates[Math.floor(Math.random() * templates.length)]();
 }
+
+var getFinalTemplate = module.exports.getFinalTemplate = function getFinalTemplate() {
+  return finalTemplates[Math.floor(Math.random() * finalTemplates.length)]();
+};
 
 var getAbstractProperty = module.exports.getAbstractProperty = function getAbstractProperty() {
   return abstractProperties[Math.floor(Math.random() * abstractProperties.length)]();
