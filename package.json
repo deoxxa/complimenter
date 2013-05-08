@@ -1,0 +1,20 @@
+{
+  "name": "complimenter",
+  "version": "0.0.0",
+  "description": "9 out of 10 doctors say you have practically radiant knees.",
+  "main": "index.js",
+  "bin": {
+    "compliment": "./bin/compliment.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deoxxa/complimenter.git"
+  },
+  "keywords": [
+    "compliments",
+    "niceties",
+    "words"
+  ],
+  "author": "Conrad Pankoff <deoxxa@fknsrs.biz> (http://www.fknsrs.biz/)",
+  "license": "BSD"
+}
